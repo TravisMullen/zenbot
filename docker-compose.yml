@@ -31,27 +31,27 @@ btc-usd:
     - mongodb
   command: ./run-btc-usd.sh
 
-### Uncomment for `eth-usd` support
-# eth-usd:
-#   build: .
-#   volumes:
-#     - .:/app
-#     - /app/node_modules
-#   links:
-#     - mongodb
-#   command: ./run-eth-usd.sh
-### /Uncomment for `eth-usd` support
+## Uncomment for `eth-usd` support
+eth-usd:
+  build: .
+  volumes:
+    - .:/app
+    - /app/node_modules
+  links:
+    - mongodb
+  command: ./run-eth-usd.sh
+## /Uncomment for `eth-usd` support
 
-### Uncomment for `eth-btc` support
-# eth-btc:
-#   build: .
-#   volumes:
-#     - .:/app
-#     - /app/node_modules
-#   links:
-#     - mongodb
-#   command: ./run-eth-btc.sh
-### /Uncomment for `eth-btc` support
+## Uncomment for `eth-btc` support
+eth-btc:
+  build: .
+  volumes:
+    - .:/app
+    - /app/node_modules
+  links:
+    - mongodb
+  command: ./run-eth-btc.sh
+## /Uncomment for `eth-btc` support
 
 mongodb:
   image: mongo:latest
